@@ -1,0 +1,10 @@
+version: "3"
+services:
+  stylegan2:
+    build: .
+    working_dir: /workspace
+    tty: true
+    volumes:
+      - ./:/workspace:cached
+    runtime: nvidia
+    shm_size: '8gb'
